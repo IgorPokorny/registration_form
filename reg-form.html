@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="reg-form.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli:200" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="regForm.js"></script>
+    </head>
+    <body>
+    	<h2>Registration Form</h2>
+    	<form class="container" action="/register" method="POST">
+    		<div class="box">
+    		<table class="personal-info">
+    			<h3>Personal Informations</h3>
+ 		        <td colspan="2">Title</td>
+			    <td>
+			        <select id="title" name="title">
+			        	<option value="Ms.">Ms.</option>
+			        	<option value="Mrs.">Mrs.</option>
+			        	<option value="Mr.">Mr.</option>		        	
+			        </select>
+			    </td>   			
+    			<tr>
+					<td colspan="2"><label for="first-name">First Name</label></td>
+					<td><input type="text" name="first-name" id="first-name"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><label for="last-name">Last Name</label></td>
+					<td><input type="text" name="last-name" id="last-name"></td>
+				</tr>
+				<tr>
+					<td colspan="2">Country</td>
+					<td>
+						<select Name="Country">
+							<option>Austria</option>
+							<option>Albania</option>
+							<option>Andorra</option>
+							<option>Belarus</option>
+							<option>Belgium</option>
+							<option>Bosnia and Herzegovina  </option>
+							<option>Bulgaria</option>
+							<option>Croatia</option>
+							<option>Cyprus</option>
+							<option>Czech Republic</option>
+							<option>Denmark</option>
+							<option>Estonia</option>
+							<option>Finland</option>
+							<option>France</option>
+							<option>Germany</option>
+							<option>Greece</option>
+							<option>Hungary</option>
+							<option>Ireland</option>
+							<option>Italy</option>
+							<option>Iceland</option>
+							<option>Latvia</option>
+							<option>Lithuania</option>
+							<option>Liechtenstein</option>
+							<option>Luxembourg</option>
+							<option>Macedonia</option>
+							<option>Malta</option>
+							<option>Monaco</option>
+							<option>Montenegro</option>
+							<option>Netherlands</option>
+							<option>Norway</option>
+							<option>Poland</option>
+							<option>Portugal</option>
+							<option>Romania</option>
+							<option>Russia</option>
+							<option>San Marino</option>
+							<option>Serbia</option>
+							<option SELECTED >Slovakia</option>
+							<option>Slovenia</option>
+							<option>Spain</option>
+							<option>Sweden</option>
+							<option>Switzerland</option>
+							<option>Ukraine</option>
+							<option>United Kingdom</option>
+							<option>Vatican</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">Paper number <i>(for authors only)</i></td>
+					<td><input type="text" name="pap-address" id="pap-ddress"></td>
+				</tr>				
+    		</table>
+    		</div>
+    		<div class="box">
+    		<table class="contact-info">
+    			<h3>Contact Informations</h3>
+    			<tr>
+					<td colspan="2">Institution</td>
+					<td><input type="text" name="institution" id="institution"></td>
+				</tr>
+    			<tr>
+					<td colspan="2">Department</td>
+					<td><input type="text" name="department" id="department"></td>
+				</tr>
+				<tr>
+					<td colspan="2">Street</td>
+					<td><input type="text" name="street" id="street"></td>
+				</tr>
+		    	<tr>
+					<td colspan="2">City</td>
+					<td><input type="text" name="city" id="city"></td>
+				</tr>
+		    	<tr>
+					<td colspan="2">ZIP Code</td>
+					<td><input type="text" name="zipcode" id="zipcode"></td>
+				</tr>
+		    	<tr>
+					<td colspan="2">Phone</td>
+					<td><input type="text" name="phone" id="phone"></td>
+				</tr>
+                <tr>
+					<td colspan="2">E-mail</td>
+					<td><input type="text" name="e-mail" id="e-mail"></td>
+				</tr>														
+    		</table>
+    		</div>
+    		<div class="box">
+    		<table>
+    			<h3>Invoice Informations</h3>
+    			<tr>
+					<td colspan="2">IČO / CIN (Commerce ID Number)</td>
+					<td><input type="text" name="ico" id="ico"></td>
+				</tr>
+    			<tr>
+					<td colspan="2">DIČ / TIN (Tax ID Number)</td>
+					<td><input type="text" name="dic" id="dic"></td>
+				</tr>
+				<tr>
+					<td colspan="2">IČ DPH / VAT Number</td>
+					<td><input type="text" name="dph" id="dph"></td>
+				</tr>    			
+    		</table>
+    		</div>
+    		<div class="box">
+    		<table>
+    			<h4>Conference Registration Fee 260€</h4>
+    			<p>Conference registration fee (per participant) includes access to the conference, conference proceedings, contribution publication at conference proceedings, diet during the conference, welcome party, trip and transport.</p>
+    			<h3>Accommodation</h3>
+    			<tr>
+    				<td colspan="1">From
+    				<input type="text" name="from" id="from"></td>
+    				<td colspan="1">To
+    				<input type="text" name="to" id="to"></td>
+	   		    <tr>
+	   		        <td colspan="2">
+				    	<select id="accommodation" name="accommodation">
+				        	<option>No Accommodation</option>
+				        	<option>Double room</option>
+				        	<option>Apartment</option>		        	
+				        </select>
+				        <input type="text" name="nights" id="nights">night(s)
+				    </td>
+				</tr>
+			    <tr>
+			    	<td colspan="1">Conference registration fee with accommodation</td>
+			    	<td><input type="text" name="sum" id="sum"></td>
+			    </tr> 
+    		</table>
+    		</div>
+            <div class="box">
+            <h3>Bus Transport</h3>
+            <table>
+                <tr><td colspan="2">I would like to take bus transport <b> from Košice to Prešov </b> (<i> 5th November 2017 </i>).</td></tr>
+                <tr>
+                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="bus1"> Yes</td>  
+                    <td class="no-column"><input type="radio" name="bus1" value="no" id="bus1"> No</td>
+                </tr>
+                
+                <tr><td colspan="2"> I would like to take bus transport <b> from Prešov to Košice </b> (<i> 7th November 2017 </i>).</td></tr>
+                <tr>
+                    <td class="yes-column"><input type="radio" name="bus2" value="yes" id="bus2"> Yes</td>  
+                    <td class="no-column"><input type="radio" name="bus2" value="no" id="bus2"> No</td>
+                </tr>
+            </table>
+            </div>
+            <input type="submit" value="Send">
+    	</form>
+    </body>

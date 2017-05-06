@@ -1,0 +1,44 @@
+body{
+	font-family: 'Muli', sans-serif;
+	background-image: linear-gradient(90deg, bisque, orange);
+	font-weight: normal;
+}
+
+.container {
+	width: 60%;
+	margin:auto;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+.box {
+	background-color: rgba(256,256,256,0.5);
+	padding: 15px;
+	margin: 22px;
+	border-radius: 7px;
+}
+
+input[type=text], select {
+	height: 30px;
+	width: 300px;
+	border-radius: 7px;
+	margin: 7px;
+	/*padding: 7px;*/
+}
+
+#nights, #from, #to{
+	width: 100px;
+}
+
+#bus1, #bus2 {
+    
+     
+
+}
+
+.yes-column {
+    width: 80px;
+}
