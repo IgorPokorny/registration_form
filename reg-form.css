@@ -1,44 +1,71 @@
 body{
 	font-family: 'Muli', sans-serif;
-	background-image: linear-gradient(90deg, bisque, orange);
-	font-weight: normal;
-}
+	/*background-image: linear-gradient(90deg, bisque, #f2ae72);*/
+    /*background-image: radial-gradient( #34e89e ,#0f3443);*/
+    background-image: url(wild-sea.png);
+    font-weight: normal;
+    margin-bottom: -20px;
+    /*color: #814206;*/
+
+}   
+/* #bardejov-nostyle table tr td a {
+    text-decoration: none;
+ }*/
 
 .container {
-	width: 60%;
-	margin:auto;
+	max-width: 1600px;
+	margin:0 auto;
+    background-image: radial-gradient( #FCF1E3 ,#FFB75E);
 
 }
 
-h2 {
-	text-align: center;
+h1 {
+	padding-left: 265px;
+    padding-top: 30px;
+    margin-top: -15px;
+}
+
+h1, h3, h4, .box a {
+    color: #bf6106;
 }
 
 .box {
-	background-color: rgba(256,256,256,0.5);
-	padding: 15px;
-	margin: 22px;
+	background-color: rgba(256,256,256,0.3);
+	padding: 15px 35px 23px 35px;
+    margin: 22px auto;
+	/*margin-bottom: 22px;*/
 	border-radius: 7px;
+    max-width: 1000px;
+
 }
 
-input[type=text], select {
-	height: 30px;
+.box a {
+    text-decoration: none;
+
+}
+
+input[type=text] {
+	height: 20px;
 	width: 300px;
-	border-radius: 7px;
+	/*border-radius: 0px;*/
 	margin: 7px;
 	/*padding: 7px;*/
+}
+
+select {
+    margin: 7px;
+    font-family: 'Muli', sans-serif;
+    /*color: black;*/
 }
 
 #nights, #from, #to{
 	width: 100px;
 }
 
-#bus1, #bus2 {
-    
-     
-
-}
-
 .yes-column {
     width: 80px;
 }
+
+/*label {
+    cursor: default;
+}*/

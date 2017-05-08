@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Registration Form</title>
+        <title>Informatics’2017 Conference Registration</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="reg-form.css">
-        <link href="https://fonts.googleapis.com/css?family=Muli:200" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="regForm.js"></script>
     </head>
     <body>
-    	<h2>Registration Form</h2>
-    	<form class="container" action="/register" method="POST">
+        <div class="container">
+    	<h1>Informatics’2017 Conference Registration</h1>
+    	<form action="/register" method="POST">
     		<div class="box">
     		<table class="personal-info">
     			<h3>Personal Informations</h3>
@@ -166,19 +167,36 @@
             <div class="box">
             <h3>Bus Transport</h3>
             <table>
-                <tr><td colspan="2">I would like to take bus transport <b> from Košice to Prešov </b> (<i> 5th November 2017 </i>).</td></tr>
+                <tr><td colspan="2">I would like to take a bus transport <b> from Košice to Prešov </b> (<i> 5th November 2017 </i>):</td></tr>
                 <tr>
-                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="bus1"> Yes</td>  
+                    <label for="bus10"></label>
+                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="bus10"> Yes</td>
+                    <label for="bus1"></label>  
                     <td class="no-column"><input type="radio" name="bus1" value="no" id="bus1"> No</td>
                 </tr>
                 
-                <tr><td colspan="2"> I would like to take bus transport <b> from Prešov to Košice </b> (<i> 7th November 2017 </i>).</td></tr>
+                <tr><td colspan="2"> I would like to take a bus transport <b> from Prešov to Košice </b> (<i> 7th November 2017 </i>):</td></tr>
                 <tr>
-                    <td class="yes-column"><input type="radio" name="bus2" value="yes" id="bus2"> Yes</td>  
-                    <td class="no-column"><input type="radio" name="bus2" value="no" id="bus2"> No</td>
+                    <td class="yes-column"><label><input type="radio" name="bus2" value="yes" id="bus2"> Yes</label></td>  
+                    <td class="no-column"><label><input type="radio" name="bus2" value="no" id="bus2"> No</label></td>
                 </tr>
             </table>
             </div>
+            <div class="box" id="bardejov-nostyle">
+            <h3>Trip</h3>
+            <table>
+                <tr><td style=""  colspan="2">I'm interested in a trip to <a href="https://en.wikipedia.org/wiki/Bardejov" TARGET="_blank">Bardejov</a>:</td></tr>
+                <tr>
+                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="trip1"><label for="trip1"> Yes</label></td>
+                    <td class="no-column"><input type="radio" name="bus1" value="no" id="trip"><label for="trip"> No</label></td>
+                </tr>
+            </table>
+            </div>
+            <div class="box">
+            <h4>Info about</h4>
+            <textarea></textarea>
+            </div>
             <input type="submit" value="Send">
     	</form>
+        </div>
     </body>
