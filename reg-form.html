@@ -14,7 +14,7 @@
     	<form action="/register" method="POST">
     		<div class="box">
     		<table class="personal-info">
-    			<h3>Personal Informations</h3>
+    			<h3>Personal Information</h3>
  		        <td colspan="2">Title</td>
 			    <td>
 			        <select id="title" name="title">
@@ -83,120 +83,123 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2">Paper number <i>(for authors only)</i></td>
+					<td colspan="2"><label for="paper">Paper number</label></td>
 					<td><input type="text" name="paper" id="paper"></td>
+                    <td><label for="paper"><i>(for authors only)</i></label></td>
 				</tr>				
     		</table>
     		</div>
+            <!-- <hr> -->
     		<div class="box">
     		<table class="contact-info">
-    			<h3>Contact Informations</h3>
+    			<h3>Contact Information</h3>
     			<tr>
-					<td colspan="2">Institution</td>
+					<td colspan="2"><label for="institution">Institution</label></td>
 					<td><input type="text" name="institution" id="institution"></td>
 				</tr>
     			<tr>
-					<td colspan="2">Department</td>
+					<td colspan="2"><label for="department">Department</label></td>
 					<td><input type="text" name="department" id="department"></td>
 				</tr>
 				<tr>
-					<td colspan="2">Street</td>
+					<td colspan="2"><label for="street">Street</label></td>
 					<td><input type="text" name="street" id="street"></td>
 				</tr>
 		    	<tr>
-					<td colspan="2">City</td>
+					<td colspan="2"><label for="city">City</label></td>
 					<td><input type="text" name="city" id="city"></td>
 				</tr>
 		    	<tr>
-					<td colspan="2">ZIP Code</td>
+					<td colspan="2"><label for="zipcode">ZIP Code</label></td>
 					<td><input type="text" name="zipcode" id="zipcode"></td>
 				</tr>
 		    	<tr>
-					<td colspan="2">Phone</td>
+					<td colspan="2"><label for="phone">Phone</label></td>
 					<td><input type="text" name="phone" id="phone"></td>
 				</tr>
                 <tr>
-					<td colspan="2">E-mail</td>
+					<td colspan="2"><label for="e-mail">E-mail</label></td>
 					<td><input type="text" name="e-mail" id="e-mail"></td>
 				</tr>														
     		</table>
     		</div>
+            <!-- <hr> -->
     		<div class="box">
     		<table>
-    			<h3>Invoice Informations</h3>
+    			<h3>Invoice Information</h3>
     			<tr>
-					<td colspan="2">IČO / CIN (Commerce ID Number)</td>
+					<td colspan="2"><label for="ico">IČO / CIN (Commerce ID Number)</label></td>
 					<td><input type="text" name="ico" id="ico"></td>
 				</tr>
     			<tr>
-					<td colspan="2">DIČ / TIN (Tax ID Number)</td>
+					<td colspan="2"><label for="dic">DIČ / TIN (Tax ID Number)</label></td>
 					<td><input type="text" name="dic" id="dic"></td>
 				</tr>
 				<tr>
-					<td colspan="2">IČ DPH / VAT Number</td>
+					<td colspan="2"><label for="dph">IČ DPH / VAT Number</label></td>
 					<td><input type="text" name="dph" id="dph"></td>
 				</tr>    			
     		</table>
     		</div>
+            <!-- <hr> -->
     		<div class="box">
-    		<table>
-    			<h4>Conference Registration Fee 260€</h4>
-    			<p>Conference registration fee (per participant) includes access to the conference, conference proceedings, contribution publication at conference proceedings, diet during the conference, welcome party, trip and transport.</p>
+    		    
     			<h3>Accommodation</h3>
-    			<tr>
-    				<td colspan="1">From
-    				<input type="text" name="from" id="from"></td>
-    				<td colspan="1">To
-    				<input type="text" name="to" id="to"></td>
-	   		    <tr>
-	   		        <td colspan="2">
-				    	<select id="accommodation" name="accommodation">
-				        	<option>No Accommodation</option>
-				        	<option>Double room</option>
-				        	<option>Apartment</option>		        	
-				        </select>
-				        <input type="text" name="nights" id="nights">night(s)
-				    </td>
-				</tr>
-			    <tr>
-			    	<td colspan="1">Conference registration fee with accommodation</td>
-			    	<td><input type="text" name="sum" id="sum"></td>
-			    </tr> 
-    		</table>
-    		</div>
+                <label>From<input type="text" name="from" id="from"></label>    			
+				
+				<label>To<input type="text" name="to" id="to"></label>
+                <br>
+                <select id="accommodation" name="accommodation">
+		        	<option>No Accommodation</option>
+		        	<option>Double room  45 € / room / night (avalaible: 24)</option>
+		        	<!-- <option>Apartment (two-bed) 41 € / room / night (avalaible: 11)</option> -->		        	
+		        </select>
+				        <!-- <input type="text" name="nights" id="nights">night(s) -->
+				<div class="switch" id="switch">
+                    <p>I prefer to stay in room:</p>
+                    <input type="radio" name="alone" id="alone"><label for="alone">alone (45 € / person / night)</label>
+                    <br>
+                    <input type="radio" name="with" id="with">with<input type="text" name="matename" placeholder="your friend's name"><label for="with">(22,50 € / person / night)</label>
+                    <br>
+                    <input type="radio" name="random" id="random"><label for="random">someone (will be assigned) - (22,40  € / person / night)</label>
+                </div>    
+			    <p>The Conference Registration Fee (per participant) is <b>260 €</b> and includes an access to the conference, <br>the conference proceedings, a contribution publication at the conference proceedings, <br>a diet during the conference, a welcome party, a trip and a transport.</p>
+			    <p class="accommodation">Total sum:<b> 260 € </b> </p>
+			</div> 
+            <!-- <hr> -->
             <div class="box">
             <h3>Bus Transport</h3>
             <table>
                 <tr><td colspan="2">I would like to take a bus transport <b> from Košice to Prešov </b> (<i> 5th November 2017 </i>):</td></tr>
                 <tr>
-                    <label for="bus10"></label>
-                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="bus10"> Yes</td>
-                    <label for="bus1"></label>  
-                    <td class="no-column"><input type="radio" name="bus1" value="no" id="bus1"> No</td>
+                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="bus1"><label for="bus1"> Yes</label></td>
+                    <td class="no-column"><input type="radio" name="bus1" value="no" id="bus10"><label for="bus10"> No</label></td>
                 </tr>
                 
                 <tr><td colspan="2"> I would like to take a bus transport <b> from Prešov to Košice </b> (<i> 7th November 2017 </i>):</td></tr>
                 <tr>
-                    <td class="yes-column"><label><input type="radio" name="bus2" value="yes" id="bus2"> Yes</label></td>  
-                    <td class="no-column"><label><input type="radio" name="bus2" value="no" id="bus2"> No</label></td>
+                    <td class="yes-column"><input type="radio" name="bus2" value="yes" id="bus2"><label for="bus2"> Yes</label></td>  
+                    <td class="no-column"><input type="radio" name="bus2" value="no" id="bus20"><label for="bus20"> No</label></td>
                 </tr>
             </table>
             </div>
+            <!-- <hr> -->
             <div class="box" id="bardejov-nostyle">
             <h3>Trip</h3>
             <table>
-                <tr><td style=""  colspan="2">I'm interested in a trip to <a href="https://en.wikipedia.org/wiki/Bardejov" TARGET="_blank">Bardejov</a>:</td></tr>
+                <tr><td style=""  colspan="2">I'd like to take part in a trip to <a href="https://en.wikipedia.org/wiki/Bardejov" TARGET="_blank">Bardejov</a>:</td></tr>
                 <tr>
-                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="trip1"><label for="trip1"> Yes</label></td>
-                    <td class="no-column"><input type="radio" name="bus1" value="no" id="trip"><label for="trip"> No</label></td>
+                    <td class="yes-column"><input type="radio" name="bus0" value="yes" id="trip1"><label for="trip1"> Yes</label></td>
+                    <td class="no-column"><input type="radio" name="bus0" value="no" id="trip"><label for="trip"> No</label></td>
                 </tr>
             </table>
             </div>
+            <!-- <hr> -->
             <div class="box">
-            <h4>Info about</h4>
+            <h4>Note about meal (vegetarian food, allergies, and others ... ): </h4>
             <textarea></textarea>
             </div>
-            <input type="submit" value="Send">
+            <input id="submit" type="submit" value="Send">
     	</form>
         </div>
     </body>

@@ -10,15 +10,15 @@ body{
  }*/
 
 .container {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin:-25px auto;
     /*margin-top:*/ 
     background-color:rgba(256,256,256,0.7); 
 }
 
 h1 {
-    padding-top: 40px;
-    padding-left: 50px
+    padding-top: 50px;
+    padding-left: 100px
 }
 
 h1, h3, h4, .box a {
@@ -30,8 +30,12 @@ h1, h3, h4, .box a {
 	/*background-color: rgba(256,256,256,0.6);*/
 	padding: 15px 35px 23px 35px;
 	margin: 22px auto;
-	border-radius: 7px;
-
+	border-radius: 0px;
+    border-bottom: solid;
+    /*border-bottom-style: groove;*/
+    border-bottom-width: 3px;
+    border-bottom-color: #f29f0b66; 
+    line-height: 150%;
 }
 
 .box a {
@@ -70,19 +74,28 @@ select {
     width: 80px;
 }
 
-hr {
+/*hr {
     
     width: 1000px;
     color: #f29f0b66;
+}*/
+
+.switch {
+    /*background-color: rgba(256,256,256,0.9);*/
+    opacity: 0.3;
+    margin: 0px 400px 0px 0px;
+    padding: 0 10px 10px 10px;
 }
 
 textarea {
     width: 400px;
     height: 100px;
+    max-width: 1000px;
+    max-height: 200px;
 }
 
 #submit {
-    margin-left: 45px;
+    margin-left: 64px;
     margin-bottom: 40px;
     height: 35px;
     width: 90px;
@@ -90,6 +103,10 @@ textarea {
 
 #submit:hover {
     background-color: #f29f0b66;
+}
+
+#accommodation {
+    margin-left: 0px;
 }
 
 /*label {
