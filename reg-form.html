@@ -3,10 +3,10 @@
     <head>
         <title>Informatics’2017 Conference Registration</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="reg-form.css">
+        <link rel="stylesheet" type="text/css" href="static/reg-form.css">
          <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="regForm.js"></script>
+        <script src="static/regForm.js"></script>
     </head>
     <body>
         <div class="container">
@@ -157,11 +157,11 @@
 				        <!-- <input type="text" name="nights" id="nights">night(s) -->
 				<div class="switch" id="switch">
                     <p>I prefer to stay in room:</p>
-                    <input type="radio" name="alone" id="alone"><label for="alone">alone (45 € / person / night)</label>
+                    <input type="radio" name="roommate" id="alone" disabled><label for="alone">alone (45 € / person / night)</label>
                     <br>
-                    <input type="radio" name="with" id="with">with<input type="text" name="matename" placeholder="your friend's name"><label for="with">(22,50 € / person / night)</label>
+                    <input type="radio" name="roommate" id="with" disabled>with<input type="text" name="matename" disabled placeholder="your friend's name"><label for="with">(22,50 € / person / night)</label>
                     <br>
-                    <input type="radio" name="random" id="random"><label for="random">someone (will be assigned) - (22,40  € / person / night)</label>
+                    <input type="radio" name="roommate" id="random" disabled><label for="random">someone (will be assigned) - (22,40  € / person / night)</label>
                 </div>    
 			    <p>The Conference Registration Fee (per participant) is <b>260 €</b> and includes an access to the conference, <br>the conference proceedings, a contribution publication at the conference proceedings, <br>a diet during the conference, a welcome party, a trip and a transport.</p>
 			    <p class="accommodation">Total sum:<b> 260 € </b> </p>

@@ -2,7 +2,7 @@ body{
 	font-family: 'Muli', sans-serif;
 	/*background-image: linear-gradient(90deg, #dbe6f6, #c5796d);*/
     /*background-image: radial-gradient(#b6fbff, #83a4d4);*/
-    background-image: url(wild-sea.png);
+    background-image: url(shattered-island.gif);
     font-weight: normal;
 }   
 /* #bardejov-nostyle table tr td a {
@@ -13,7 +13,7 @@ body{
 	max-width: 1200px;
 	margin:-25px auto;
     /*margin-top:*/ 
-    background-color:rgba(256,256,256,0.7); 
+    background-color:rgba(249, 239, 229,1.0); 
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 }
 
 h1, h3, h4, .box a {
-	color:#75260c;
+	color:#1d0f7b;
 }
 
 .box {
@@ -33,8 +33,8 @@ h1, h3, h4, .box a {
 	border-radius: 0px;
     border-bottom: solid;
     /*border-bottom-style: groove;*/
-    border-bottom-width: 3px;
-    border-bottom-color: #f29f0b66; 
+    border-bottom-width: 1px;
+    border-bottom-color: #6971cc66; 
     line-height: 150%;
 }
 
@@ -102,7 +102,7 @@ textarea {
 }
 
 #submit:hover {
-    background-color: #f29f0b66;
+    background-color: #6971cc66;
 }
 
 #accommodation {

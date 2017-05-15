@@ -1,20 +1,13 @@
 import csv
 import os
 
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def registration_form():
     return send_file("reg-form.html")
-
-@app.route("/<filename>")
-def static_file(filename):
-    if os.path.exists(filename):
-        return send_file(filename)
-    else:
-        return "Not found", 404
 
 FILE_NAME = "registrations.csv"
 FIELDS = [
@@ -51,7 +44,4 @@ def register():
             csv_writer.writeheader()
         csv_writer.writerow(request.form)
 
-    return "<b>Registration completed.</b>"
-
-if __name__ == "__main__":
-    app.run()
+    return render_template("completed.html", person=request.form, fields=['country', 'institution'])
