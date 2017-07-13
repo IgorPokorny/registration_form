@@ -1,205 +1,221 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Informatics’2017 Conference Registration</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="static/reg-form.css">
-         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700" rel="stylesheet"> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="static/regForm.js"></script>
-    </head>
-    <body>
-        <div class="container">
-    	<h1>Informatics’2017 Conference Registration</h1>
-    	<form action="/register" method="POST">
-    		<div class="box">
-    		<table class="personal-info">
-    			<h3>Personal Information</h3>
- 		        <td colspan="2">Title</td>
-			    <td>
-			        <select id="title" name="title">
-			        	<option value="Ms.">Ms.</option>
-			        	<option value="Mrs.">Mrs.</option>
-			        	<option value="Mr.">Mr.</option>		        	
-			        </select>
-			    </td>   			
-    			<tr>
-					<td colspan="2"><label for="first-name">First Name</label></td>
-					<td><input type="text" name="first-name" id="first-name"></td>
-				</tr>
-				<tr>
-					<td colspan="2"><label for="last-name">Last Name</label></td>
-					<td><input type="text" name="last-name" id="last-name"></td>
-				</tr>
-				<tr>
-					<td colspan="2">Country</td>
-					<td>
-						<select name="country">
-							<option>Austria</option>
-							<option>Albania</option>
-							<option>Andorra</option>
-							<option>Belarus</option>
-							<option>Belgium</option>
-							<option>Bosnia and Herzegovina  </option>
-							<option>Bulgaria</option>
-							<option>Croatia</option>
-							<option>Cyprus</option>
-							<option>Czech Republic</option>
-							<option>Denmark</option>
-							<option>Estonia</option>
-							<option>Finland</option>
-							<option>France</option>
-							<option>Germany</option>
-							<option>Greece</option>
-							<option>Hungary</option>
-							<option>Ireland</option>
-							<option>Italy</option>
-							<option>Iceland</option>
-							<option>Latvia</option>
-							<option>Lithuania</option>
-							<option>Liechtenstein</option>
-							<option>Luxembourg</option>
-							<option>Macedonia</option>
-							<option>Malta</option>
-							<option>Monaco</option>
-							<option>Montenegro</option>
-							<option>Netherlands</option>
-							<option>Norway</option>
-							<option>Poland</option>
-							<option>Portugal</option>
-							<option>Romania</option>
-							<option>Russia</option>
-							<option>San Marino</option>
-							<option>Serbia</option>
-							<option SELECTED >Slovakia</option>
-							<option>Slovenia</option>
-							<option>Spain</option>
-							<option>Sweden</option>
-							<option>Switzerland</option>
-							<option>Ukraine</option>
-							<option>United Kingdom</option>
-							<option>Vatican</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2"><label for="paper">Paper number</label></td>
-					<td><input type="text" name="paper" id="paper"></td>
-                    <td><label for="paper"><i>(for authors only)</i></label></td>
-				</tr>				
-    		</table>
-    		</div>
-            <!-- <hr> -->
-    		<div class="box">
-    		<table class="contact-info">
-    			<h3>Contact Information</h3>
-    			<tr>
-					<td colspan="2"><label for="institution">Institution</label></td>
-					<td><input type="text" name="institution" id="institution"></td>
-				</tr>
-    			<tr>
-					<td colspan="2"><label for="department">Department</label></td>
-					<td><input type="text" name="department" id="department"></td>
-				</tr>
-				<tr>
-					<td colspan="2"><label for="street">Street</label></td>
-					<td><input type="text" name="street" id="street"></td>
-				</tr>
-		    	<tr>
-					<td colspan="2"><label for="city">City</label></td>
-					<td><input type="text" name="city" id="city"></td>
-				</tr>
-		    	<tr>
-					<td colspan="2"><label for="zipcode">ZIP Code</label></td>
-					<td><input type="text" name="zipcode" id="zipcode"></td>
-				</tr>
-		    	<tr>
-					<td colspan="2"><label for="phone">Phone</label></td>
-					<td><input type="text" name="phone" id="phone"></td>
-				</tr>
-                <tr>
-					<td colspan="2"><label for="e-mail">E-mail</label></td>
-					<td><input type="text" name="e-mail" id="e-mail"></td>
-				</tr>														
-    		</table>
-    		</div>
-            <!-- <hr> -->
-    		<div class="box">
-    		<table>
-    			<h3>Invoice Information</h3>
-    			<tr>
-					<td colspan="2"><label for="ico">IČO / CIN (Commerce ID Number)</label></td>
-					<td><input type="text" name="ico" id="ico"></td>
-				</tr>
-    			<tr>
-					<td colspan="2"><label for="dic">DIČ / TIN (Tax ID Number)</label></td>
-					<td><input type="text" name="dic" id="dic"></td>
-				</tr>
-				<tr>
-					<td colspan="2"><label for="dph">IČ DPH / VAT Number</label></td>
-					<td><input type="text" name="dph" id="dph"></td>
-				</tr>    			
-    		</table>
-    		</div>
-            <!-- <hr> -->
-    		<div class="box">
-    		    
-    			<h3>Accommodation</h3>
-                <label>From<input type="text" name="from" id="from"></label>    			
-				
-				<label>To<input type="text" name="to" id="to"></label>
-                <br>
-                <select id="accommodation" name="accommodation">
-		        	<option>No Accommodation</option>
-		        	<option>Double room  45 € / room / night (avalaible: 24)</option>
-		        	<!-- <option>Apartment (two-bed) 41 € / room / night (avalaible: 11)</option> -->		        	
-		        </select>
-				        <!-- <input type="text" name="nights" id="nights">night(s) -->
-				<div class="switch" id="switch">
-                    <p>I prefer to stay in room:</p>
-                    <input type="radio" name="roommate" id="alone" disabled><label for="alone">alone (45 € / person / night)</label>
-                    <br>
-                    <input type="radio" name="roommate" id="with" disabled>with<input type="text" name="matename" disabled placeholder="your friend's name"><label for="with">(22,50 € / person / night)</label>
-                    <br>
-                    <input type="radio" name="roommate" id="random" disabled><label for="random">someone (will be assigned) - (22,40  € / person / night)</label>
-                </div>    
-			    <p>The Conference Registration Fee (per participant) is <b>260 €</b> and includes an access to the conference, <br>the conference proceedings, a contribution publication at the conference proceedings, <br>a diet during the conference, a welcome party, a trip and a transport.</p>
-			    <p class="accommodation">Total sum:<b> 260 € </b> </p>
-			</div> 
-            <!-- <hr> -->
-            <div class="box">
-            <h3>Bus Transport</h3>
-            <table>
-                <tr><td colspan="2">I would like to take a bus transport <b> from Košice to Prešov </b> (<i> 5th November 2017 </i>):</td></tr>
-                <tr>
-                    <td class="yes-column"><input type="radio" name="bus1" value="yes" id="bus1"><label for="bus1"> Yes</label></td>
-                    <td class="no-column"><input type="radio" name="bus1" value="no" id="bus10"><label for="bus10"> No</label></td>
-                </tr>
-                
-                <tr><td colspan="2"> I would like to take a bus transport <b> from Prešov to Košice </b> (<i> 7th November 2017 </i>):</td></tr>
-                <tr>
-                    <td class="yes-column"><input type="radio" name="bus2" value="yes" id="bus2"><label for="bus2"> Yes</label></td>  
-                    <td class="no-column"><input type="radio" name="bus2" value="no" id="bus20"><label for="bus20"> No</label></td>
-                </tr>
-            </table>
-            </div>
-            <!-- <hr> -->
-            <div class="box" id="bardejov-nostyle">
-            <h3>Trip</h3>
-            <table>
-                <tr><td style=""  colspan="2">I'd like to take part in a trip to <a href="https://en.wikipedia.org/wiki/Bardejov" TARGET="_blank">Bardejov</a>:</td></tr>
-                <tr>
-                    <td class="yes-column"><input type="radio" name="bus0" value="yes" id="trip1"><label for="trip1"> Yes</label></td>
-                    <td class="no-column"><input type="radio" name="bus0" value="no" id="trip"><label for="trip"> No</label></td>
-                </tr>
-            </table>
-            </div>
-            <!-- <hr> -->
-            <div class="box">
-            <h4>Note about meal (vegetarian food, allergies, and others ... ): </h4>
-            <textarea></textarea>
-            </div>
-            <input id="submit" type="submit" value="Send">
-    	</form>
+
+<head>
+  <title>Informatics’2017 Conference Registration</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="static/reg-form.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+  <script src="static/regForm.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <main class="content">
+      <h1>Informatics’2017 Conference Registration</h1>
+      <form action="/register" method="POST">
+        <div class="form-section">
+          <table class="personal-info">
+            <h3>Personal Information</h3>
+            <td>Title</td>
+            <td>
+              <select id="title" name="title">
+                <option value="---">---</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Mr.">Mr.</option>          
+              </select>
+            </td>
+            <tr>
+              <td class="required-data"><label for="first-name">First Name</label></td>
+              <td><input type="text" name="first-name" id="first-name" class="field"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="last-name">Last Name</label></td>
+              <td><input type="text" name="last-name" id="last-name" class="field"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label>Country</label></td>
+              <td>
+                <select name="country">
+                <option>Albania</option>
+                <option>Andorra</option>
+                <option>Austria</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Bosnia and Herzegovina  </option>
+                <option>Bulgaria</option>
+                <option>Croatia</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Estonia</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>Greece</option>
+                <option>Hungary</option>
+                <option>Ireland</option>
+                <option>Italy</option>
+                <option>Iceland</option>
+                <option>Latvia</option>
+                <option>Lithuania</option>
+                <option>Liechtenstein</option>
+                <option>Luxembourg</option>
+                <option>Macedonia</option>
+                <option>Malta</option>
+                <option>Monaco</option>
+                <option>Montenegro</option>
+                <option>Netherlands</option>
+                <option>Norway</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Romania</option>
+                <option>Russia</option>
+                <option>San Marino</option>
+                <option>Serbia</option>
+                <option SELECTED >Slovakia</option>
+                <option>Slovenia</option>
+                <option>Spain</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Ukraine</option>
+                <option>United Kingdom</option>
+                <option>Vatican</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="paper">Paper number</label></td>
+              <td><input type="text" name="paper" id="paper" class="field"></td>
+              <td><label for="paper" class="paper"><i>(for authors only)</i></label></td>
+            </tr>
+          </table>
         </div>
-    </body>
+        <!-- <hr> -->
+        <div class="form-section">
+          <table class="contact-info">
+            <h3>Contact Information</h3>
+            <tr>
+              <td class="required-data"><label for="institution">Institution</label></td>
+              <td><input type="text" name="institution" id="institution" class="field field--long"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="department">Department</label></td>
+              <td><input type="text" name="department" id="department" class="field field--long"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="street">Street</label></td>
+              <td><input type="text" name="street" id="street" class="field field--long"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="city">City</label></td>
+              <td><input type="text" name="city" id="city" class="field"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="zipcode">ZIP Code</label></td>
+              <td><input type="text" name="zipcode" id="zipcode" class="field"></td>
+            </tr>
+            <tr>
+              <td><label for="phone">Phone</label></td>
+              <td><input type="text" name="phone" id="phone" class="field"></td>
+            </tr>
+            <tr>
+              <td class="required-data"><label for="e-mail">E-mail</label></td>
+              <td><input type="text" name="e-mail" id="e-mail" class="field"></td>
+            </tr>
+          </table>
+          <footer class="required-notice"><span class="required-notice__marker">*</span> required data</footer>
+        </div>
+        <!-- <hr> -->
+        <div class="form-section">
+          <table>
+            <h3>Invoice Information</h3>
+            <tr>
+              <td><label for="ico">IČO / CIN (Commerce ID Number)</label></td>
+              <td><input type="text" name="ico" id="ico" class="field"></td>
+            </tr>
+            <tr>
+              <td><label for="dic">DIČ / TIN (Tax ID Number)</label></td>
+              <td><input type="text" name="dic" id="dic" class="field"></td>
+            </tr>
+            <tr>
+              <td><label for="dph">IČ DPH / VAT Number</label></td>
+              <td><input type="text" name="dph" id="dph" class="field"></td>
+            </tr>
+          </table>
+        </div>
+        <!-- <hr> -->
+        <div class="form-section">
+
+          <h3>Accommodation</h3>
+          <label>From<input class="field field--date js-date on-change" type="text" name="from" id="from" value="Sun, 5 Nov 2017"></label>
+
+          <label class="to">To<input class="field field--date js-date on-change" type="text" name="to" id="to" value="Tue, 7 Nov 2017"></label>
+          <span id="nights"><span class="nights" id="numNights">0</span> nights</span>
+          <span class="alert" id="alert"></span>
+          <br>
+          <select  class="accommodation" id="accommodation" name="accommodation">
+            <option class="on-change" value="no-accommodation">No Accommodation</option>
+            <option class="on-change" value="double-room">Double room  45 € / room / night (avalaible: 24)</option>
+            <!-- <option>Apartment (two-bed) 41 € / room / night (avalaible: 11)</option> -->          
+            </select>
+          <!-- <input type="text" name="nights" id="nights">night(s) -->
+          <fieldset disabled class="accommodation-details" id="accommodation-details">
+            <p>I prefer to stay in room:</p>
+            <input class="on-change margin-bottom" type="radio" name="roommate" value="alone" id="alone"><label for="alone">single (45 € / person / night)</label>
+            <br>
+            <label>
+              <input class="on-change" type="radio" name="roommate" value="with" id="with">with</label>
+              <input type="text" name="matename" class="field" placeholder="your friend's name &amp; surname">
+              <label for="with">(22,50 € / person / night)</label>
+            <br>
+            <input class="on-change" type="radio" name="roommate" value="random" id="random"><label for="random">someone (will be assigned) - (22,50  € / person / night)</label>
+          </fieldset>
+          <p>Conference Registration Fee (per participant) is <b>260 €</b> and includes access to the conference, <br>the conference
+            proceedings, a contribution publication at the conference proceedings, <br>a diet during the conference, a welcome
+            party, a trip and a transport.</p>
+          <span>In total:   </span><span class="in-total" id="in-total">260</span><span><b> €</b></span>
+          <span class="alert" id="total-sum-alert"></span>
+        </div>
+        <!-- <hr> -->
+        <div class="form-section transport">
+          <h3>Bus Transport</h3>
+          <div class="margin-bottom">
+            <label>
+                <input type="checkbox" name="bus-transport-to">
+                I would like to take a bus transport <b> from Košice to Prešov </b> (<i> 5th November 2017 </i>)
+            </label>
+          </div>
+          <div class="">
+            <label>
+                <input type="checkbox" name="bus-transport-from">
+                I would like to take a bus transport <b> from Prešov to Košice </b> (<i> 7th November 2017 </i>)
+            </label>
+          </div>
+        </div>
+        <!-- <hr> -->
+        <div class="form-section">
+          <h3>Trip</h3>
+          <label>
+            <input type="checkbox" name="trip">
+            I'd like to take part in a trip to <a href="https://en.wikipedia.org/wiki/Bardejov"><i>Bardejov</i></a>
+            </label>
+          </table>
+        </div>
+        <!-- <hr> -->
+        <div class="form-section">
+          <h4>Note about meal (vegetarian food, allergies, and others ... ): </h4>
+          <textarea name="meal-note"></textarea>
+        </div>
+        <input class="submit" id="submit" type="submit" value="Register">
+      </form>
+    </main>
+  </div>
+</body>

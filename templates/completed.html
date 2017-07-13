@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Completed</title>
+</head>
+<body>
+    <h1>Registration for {{ person['first-name'] }} {{ person['last-name'] }} is completed</h1>
+
+    <table>
+    {% for field in fields %}
+        <tr><th>{{ field }}</th><td>{{ person[field] }}</td></tr>
+    {% endfor %}
+    </table>    
+</body>
+</html>

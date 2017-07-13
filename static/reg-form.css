@@ -1,53 +1,53 @@
-body{
+body {
 	font-family: 'Muli', sans-serif;
-	/*background-image: linear-gradient(90deg, #dbe6f6, #c5796d);*/
-    /*background-image: radial-gradient(#b6fbff, #83a4d4);*/
-    background-image: url(shattered-island.gif);
-    font-weight: normal;
+    background-color: #555999;
+    background-image: url(fancy-pants1.png);
+    margin: 0;
 }   
-/* #bardejov-nostyle table tr td a {
-    text-decoration: none;
- }*/
 
 .container {
 	max-width: 1200px;
-	margin:-25px auto;
-    /*margin-top:*/ 
-    background-color:rgba(249, 239, 229,1.0); 
+	margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(249, 239, 229);
+}
+
+.content {
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 h1 {
+    margin-top: 0; 
     padding-top: 50px;
-    padding-left: 100px
 }
 
-h1, h3, h4, .box a {
-	color:#1d0f7b;
+h1, h3, h4, a {
+	color: #1d0f7b;
 }
 
-.box {
-    max-width: 1000px;
-	/*background-color: rgba(256,256,256,0.6);*/
-	padding: 15px 35px 23px 35px;
-	margin: 22px auto;
-	border-radius: 0px;
+.form-section {
+	padding: 15px 0 23px 0;
     border-bottom: solid;
-    /*border-bottom-style: groove;*/
     border-bottom-width: 1px;
-    border-bottom-color: #6971cc66; 
-    line-height: 150%;
+    border-bottom-color: #C0BDDC; 
+    line-height: 1.5;
 }
 
-.box a {
-    text-decoration: none;
-}
-
-input[type=text] {
-	height: 20px;
-	width: 300px;
-	/*border-radius: 0px;*/
+.field {
+	height: 1.4em;
+	width: 24em;
 	margin: 7px;
-	/*padding: 7px;*/
+}
+
+.field--long {
+    width: 150%;
+}
+
+.field--date {
+	width: 10em;
+    margin-right: 20px;
 }
 
 select {
@@ -56,59 +56,71 @@ select {
     /*color: black;*/
 }
 
-#from, #to{
-	width: 100px;
+.required-data ::after {
+    content: " *";
+    color: red;
 }
 
-#institution, #department, #street {
-    width: 550px;
+.required-notice {
+    margin-top: 30px;
+    margin-bottom: -20px;
+    font-size: 14px;
+    font-style: italic;
 }
 
-.from {
-    width: 250px;
+.required-notice__marker {
+    font-size: 16px;
+    color: red;
 }
 
-
-
-.yes-column {
-    width: 80px;
+.nights {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/*hr {
-    
-    width: 1000px;
-    color: #f29f0b66;
-}*/
+.alert {
+    display: inline-block;
+    max-width: 400px;
+    /*width: 100%;*/
+    font-size: 14px;
+    color: red;
+    vertical-align: top;
+}
 
-.switch {
-    /*background-color: rgba(256,256,256,0.9);*/
-    opacity: 0.3;
-    margin: 0px 400px 0px 0px;
-    padding: 0 10px 10px 10px;
+.margin-bottom {   /*in div "form-section transport" & fieldset "accommodation-details"*/
+    margin-bottom: 12px;
+}
+
+.accommodation-details {
+   border: none;
+}
+
+fieldset[disabled] {
+    color: #999;
 }
 
 textarea {
-    width: 400px;
+    width: 50%;
     height: 100px;
     max-width: 1000px;
     max-height: 200px;
 }
 
-#submit {
-    margin-left: 64px;
-    margin-bottom: 40px;
-    height: 35px;
-    width: 90px;
+.submit {
+    margin: 20px 0 60px 0;
+    padding: 8px 30px;
+    font-size: 135%;
+    font-family: 'Muli', sans-serif;
+    height: 2.5em;
+    width: 7em;
 }
 
-#submit:hover {
-    background-color: #6971cc66;
-}
-
-#accommodation {
+.accommodation {
     margin-left: 0px;
 }
 
-/*label {
-    cursor: default;
-}*/
+.in-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px; 
+}
